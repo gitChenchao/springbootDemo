@@ -1,0 +1,9 @@
+server:
+  port: 9997
+spring:
+  application:
+    name: cusromer-user-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka/
