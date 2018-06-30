@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: stream-server
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: mqTestDefault
+          content-type: application/json
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /   #虚拟空间地址
+    publisher-confirms: true   #置发布消息确认回调
+
+server:
+  port: 8600

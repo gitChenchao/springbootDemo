@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: stream-client
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    publisher-confirms: true
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: user.register.queue
+          content-type: application/json # 设置消息类型，本次为对象json application/json，如果是文本则设置“text/plain”
+server:
+  port: 8700

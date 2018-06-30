@@ -1,0 +1,24 @@
+##http请求地址和资源文件映射如下:
+##    /{application}/{profile}[/{label}]
+##    /{application}-{profile}.yml
+##    /{label}/{application}-{profile}.yml
+##    /{application}-{profile}.properties
+##    /{label}/{application}-{profile}.properties
+server:
+  port: 9091
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/chenchao1234/springCloud-Config-Repo
+          search-paths: /**
+      label: master
+      username: chenchao1234
+      password: nn369355497cc
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka/
