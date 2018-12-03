@@ -18,6 +18,7 @@
         <module>demo-stream-client</module>
         <module>demo-stream-server</module>
         <module>demo-security</module>
+        <module>demo-algorithm</module>
     </modules>
     <packaging>pom</packaging>
 

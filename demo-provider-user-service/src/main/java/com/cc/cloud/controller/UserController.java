@@ -34,9 +34,9 @@ public class UserController {
         LOGGER.info("访问接口: /getUser/"+id);
         return userService.findOne(id);
     }
-    @PostMapping("/saveUser")
-    public Object save(){
-        User user = new User();
+    @PostMapping("/saveUser/{id}")
+    public Object save(@PathVariable("id") String id,
+                        @RequestBody User user){
         user.setId("2");
         user.setName("chenchao");
         user.setAge("28");

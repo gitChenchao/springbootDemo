@@ -5,7 +5,7 @@ spring:
     stream:
       bindings:
         output:
-          destination: mqTestDefault
+          destination: user.register.queue
           content-type: application/json
   rabbitmq:
     host: 127.0.0.1
